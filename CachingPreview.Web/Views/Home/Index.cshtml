@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>Windows Azure Caching - Azure June 2012 SDK </h2>
+            </hgroup>
+            <p>
+                The <a href="/category/index">Category</a> entity in the CachingPreview.Web project is storing in the Caching
+            </p>
+        </div>
+    </section>
+}
+<h3>Projects in the Solution:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>CachingPreview</h5>
+        Windows Azure Project
+    </li>
+
+    <li class="two">
+        <h5>CachingPreview.CacheWorkerRole</h5>
+        Worker Role for dedicated VM for Caching.
+    </li>
+
+    <li class="three">
+        <h5>CachingPreview.Web</h5>
+        Web Role app consuming Cache data.
+    </li>
+</ol>

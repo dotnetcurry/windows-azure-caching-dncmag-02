@@ -1,0 +1,29 @@
+@model CachingPreview.Web.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">Prodcucts</div>
+    <div class="display-field">@(Model.Prodcucts == null ? "None" : Model.Prodcucts.Count.ToString())</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

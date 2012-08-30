@@ -1,0 +1,26 @@
+@model CachingPreview.Web.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">Prodcucts</div>
+    <div class="display-field">@(Model.Prodcucts == null ? "None" : Model.Prodcucts.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CategoryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
